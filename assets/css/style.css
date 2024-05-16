@@ -1,110 +1,121 @@
-* { 
-    margin:0;
+* {
+    margin: 0;
     padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-/*Dev */
-header,
-header * {
-    outline: 1px dashed blue;
-    padding: 0;
-}
-
-
-/* Dep */
 header {
     width: 100%;
-
-    & nav{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 18px;
-        & h1 {
-            font-size:  xx-large;
-        }
-        & button {
-            border: none;
-            background: none;
-            font-size: medium;
-            font-weight: 600;
-            color: rgb(82, 82, 82);
-            transition: .3s ease-in-out;
-            &:hover {
-                color: rgb(255, 0, 0);
-            }
-        }
-    }
-
+    position: fixed;
+    background-color: rgba(208, 186, 186, 0.293);
+    z-index: 20;
 }
 
-section.hero{
+header nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    background-color: #ddd;
+}
+
+section.gabriel {
     height: 100vh;
     display: flex;
     flex-direction: column;
     overflow: hidden;
     position: relative;
+    justify-content: center;
+}
 
-    & .img {
-        /* Required */
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        object-fit: cover;
-        height: 100vh;
-        opacity: 90%;
-        z-index: -1;
+.container {
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotate(-10deg);
     }
-
-    & .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background: rgb(255, 255, 255, 0.219);
-        padding: 1.5rem ;
-        margin: 1rem;
-        gap: 14px;
-
-        & h3 {
-            font-size: 1.5rem;
-        }
-
-        & h2 {
-            font-size: 3rem;
-        }
-
-        & p {
-            font-size: 1.2rem;
-            text-align: center;
-        }
-
-        & button {
-            padding: 8px 16px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-            transition: .3s ease-out;
-        }
-
-        & :hover {
-            transform: scale(110%) translateY(-8px);
-            box-shadow: 10px 5px 5px red;
-        }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
     }
 }
 
-section.academic{
+section.gabriel img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    object-fit: cover;
     height: 100vh;
+    opacity: 0.8;
+    z-index: -1;
+}
+
+section.gabriel .content {
     display: flex;
-    align-content:center;
-    justify-content: space-between;
     flex-direction: column;
-    padding: 2rem 1rem;
+    align-items: center;
+    justify-content: center;
+    background: rgba(237, 215, 181, 0.472);
+    padding: 1.5rem;
+    margin: 1rem;
+    gap: 14px;
+}
 
-    & .title {
-        text-align: center;
+section.gabriel .content h3 {
+    font-size: 1.5rem;
+    color: rgb(9, 127, 27);
+}
 
-    }
+section.gabriel .content h2 {
+    font-size: 2.5rem;
+}
+
+section.gabriel .content p {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.education-btn, .resume-btn {
+    padding: 1rem 3em;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background: rgb(51, 79, 51);
+    cursor: pointer;
+    transition: transform 0.4s ease-out, box-shadow 0.4s ease-out;
+}
+
+.education-btn:hover, .resume-btn:hover {
+    transform: scale(1.1) translateY(-8px);
+    box-shadow: 0 20px 10px -10px rgb(38, 57, 77);
+}
+
+footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 20px 0;
 }

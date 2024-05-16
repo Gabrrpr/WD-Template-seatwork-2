@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: large;
+    background-image: url(https://images.pexels.com/photos/1054222/pexels-photo-1054222.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.container {
+    animation: transitionIn 0.75s;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: rotate(-10deg);
+    }
+    to {
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+}
+
+.education-info {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: larger;
+}
+
+.education-info p {
+    margin-bottom: 10px;
+}
+
+.separator {
+    border-top: 1px solid #000000;
+    margin: 20px 0;
+}
+
+.goback-btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.goback-btn:hover {
+    background-color: #45a049;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute; /* Position the footer at the bottom */
+    width: 100%;
+    bottom: 0;
+}
