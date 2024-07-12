@@ -107,7 +107,6 @@ WD-ProjectName
 ## Resources
 
 <!-- TODO: Add References -->
-| Title | Purpose | Link |
 | Fogs on Green Mountain | Background Img | https://images.pexels.com
 | Sunset Sky | Background Img | https://img.freepik.com
 | Dark black polygonal illustration | Background img | https://www.pinterest.ph/pin/912190099525614252
